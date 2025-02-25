@@ -1,5 +1,9 @@
 import React from 'react'
-import Login from './components/Auth/LOgin'
+import Login from './components/Auth/Login'
+import EmployeeDashboard from './components/Dashbord/EmployeeDashboard'
+import Tasklist from './components/taskList/Tasklist'
+import AdminDashbord from './components/Dashbord/AdminDashboard'
+
 
 
 const App = () => {
@@ -8,7 +12,12 @@ const App = () => {
 
   <div className='bg-black text-white'>
   
- <Login/>
+ {/* <Login/> */}
+
+ {/* <EmployeeDashboard/> */}
+
+ <AdminDashbord/>
+
 
  </div>
   

@@ -7,7 +7,12 @@ const Login = () => {
 
   const submit = (e)=> {
     e.preventDefault()
-    console.log("hello guyss, from submitted")
+    
+    setEmail("")
+    SetPassword("")
+
+ 
+   
   }
 
   return (
@@ -23,7 +28,9 @@ const Login = () => {
             <input
             value={email}
              onChange={  (e)=> { setEmail(e.target.value) }} required className='border-2 border-red-200 rounded-2xl py-3 px-5 mt-3.5 placeholder:text-gray-400' type="email" placeholder='Enter your email' /> 
-            <input required className='border-2 border-red-200 rounded-2xl py-3 px-5 mt-3.5 placeholder:text-gray-400' type="password" placeholder='Enter your password' />
+            <input
+            value={password} 
+            onChange={ (e) => SetPassword(e.target.value)}required className='border-2 border-red-200 rounded-2xl py-3 px-5 mt-3.5 placeholder:text-gray-400' type="password" placeholder='Enter your password' />
             
             <button className=' border-red-200 rounded-full py-2 px-5 text-xl mt-3.5 bg-red-400'> Login  </button>
              </form>
