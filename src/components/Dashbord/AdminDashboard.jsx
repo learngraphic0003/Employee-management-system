@@ -1,16 +1,19 @@
 import React from "react";
-import Header from "../other/Header";
 import Create from "../other/Create";
 import Alltask from "../other/Alltask";
+import Header2 from "../other/Hearder2";
+import Footer from "../other/Footer"
 
 const AdminDashboard = ( props) => {
-  // console.log(props.changeUser)
+
+
   return (
     <>
-      <div className="h-screen w-full p-10  ">
-        <Header changeUser = {props.changeUser}  />
+      <div className="h-screen w-full bg-black  ">
+        <Header2  changeUser = {props.changeUser}  />
         <Create/>
         <Alltask/>
+        <Footer/>
         
       </div>
     </>

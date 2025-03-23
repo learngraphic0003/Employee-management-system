@@ -111,6 +111,26 @@ const employees = [
     "password": "123",
     "tasks": [
       {
+        "active": false,
+        "newTask": true,
+        "completed": true,
+        "failed": false,
+        "taskTitle": "Finish Design Mockups",
+        "taskDescription": "Complete the UI/UX design mockups for the new app.",
+        "taskDate": "2025-02-28",
+        "category": "Design"
+      },
+      {
+        "active": false,
+        "newTask": false,
+        "completed": false,
+        "failed": true,
+        "taskTitle": "Finish Design Mockups",
+        "taskDescription": "Complete the UI/UX design mockups for the new app.",
+        "taskDate": "2025-02-28",
+        "category": "Design"
+      },
+      {
         "active": true,
         "newTask": true,
         "completed": true,
@@ -139,13 +159,23 @@ const employees = [
         "taskDescription": "Complete the UI/UX design mockups for the new app.",
         "taskDate": "2025-02-28",
         "category": "Design"
+      },
+      {
+        "active": false,
+        "newTask": true,
+        "completed": false,
+        "failed": false,
+        "taskTitle": "Finish Design Mockups",
+        "taskDescription": "Complete the UI/UX design mockups for the new app.",
+        "taskDate": "2025-02-28",
+        "category": "Design"
       }
     ],
     "taskCount": {
       "active": 2,
-      "newTask": 0,
+      "newTask": 1,
       "completed": 1,
-      "failed": 0
+      "failed": 1
     }
   },
   {
