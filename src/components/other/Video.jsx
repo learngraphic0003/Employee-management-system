@@ -7,7 +7,7 @@ const Video = () => {
   <div className=''> <iframe width="560" height="315" src="https://www.youtube.com/embed/J7CzwVTYDi8?si=M7UDhO3IuBmfIwGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  </div>
 
  <aside className='p-3.5 font-bold flex flex-wrap text-lg/7 text-white'>
-  <p>
+  
  <h1 className='text-blue-500'> How to Execute the Task Efficiently: </h1> 
 Plan Ahead: Start by reviewing the brand guidelines and understanding the task. Make a quick outline of how you’ll approach it.  <br />
 
@@ -27,7 +27,7 @@ Make sure to use the latest brand assets (logo, color palette).
 
 
 
-  </p>
+  
  </aside>
  </div>
 

@@ -22,13 +22,15 @@ const Login = ({ handlelogin }) => {
     });
     gsap.from('.box3', {
       opacity:0,
-      size:12,
-      rotate:360,
+      scale:0,
+      duration:1,
+     
       delay: 1.5
 
     });
     gsap.from('.box4', {
       opacity:0,
+      duration:1,
       x:-400,
       delay: 2,
       backgroundColor:"lightblue"

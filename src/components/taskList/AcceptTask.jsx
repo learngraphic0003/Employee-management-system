@@ -1,7 +1,13 @@
 import React from 'react';
+import Complete from './complete';
 
 const AcceptTask = ({ data }) => {
-  console.log(data)
+ 
+  
+ 
+
+
+
   return (
     <div className="max-w-sm w-full bg-yellow-400 rounded-xl shadow-lg p-6 mx-auto mb-6 transition-transform transform hover:scale-105">
       <div className="flex justify-between items-center">
@@ -14,7 +20,7 @@ const AcceptTask = ({ data }) => {
 
       {/* Buttons */}
       <div className="flex justify-between mt-4 space-x-4">
-        <button className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md text-sm transition duration-300 w-full sm:w-auto">
+        <button  className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md text-sm transition duration-300 w-full sm:w-auto">
           Mark as Completed
         </button>
         <button className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md text-sm transition duration-300 w-full sm:w-auto">
