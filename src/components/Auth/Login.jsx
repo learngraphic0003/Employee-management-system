@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+
+
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
@@ -49,6 +52,7 @@ const Login = ({ handlelogin }) => {
 
   return (
     <div className="  flex justify-center items-center h-screen bg-gradient-to-r from-blue-200 to-blue-300">
+     
       <div className=" box flex  bg-white rounded-lg shadow-lg overflow-hidden w-[800px] ">
         {/* Login Form Section */}
         <div className="  w-3/5 p-10">
