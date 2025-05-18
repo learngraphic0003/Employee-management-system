@@ -1,41 +1,17 @@
 import React, { useState } from "react";
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const Login = ({ handlelogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   useGSAP(() => {
-    gsap.from('.box', {
-      opacity:0,
-      y:-400,
-      delay: 0.5
-
-    });
-
-    gsap.from('.box2', {
-      opacity:0,
-      x:400,
-      delay: 1
-
-    });
-    gsap.from('.box3', {
-      opacity:0,
-      scale:0,
-      duration:1,
-     
-      delay: 1.5
-
-    });
-    gsap.from('.box4', {
-      opacity:0,
-      duration:1,
-      x:-400,
-      delay: 2,
-      backgroundColor:"lightblue"
-
-    });
+    gsap.from(".box", { opacity: 0, y: -400, delay: 0.5 });
+    gsap.from(".box2", { opacity: 0, x: 400, delay: 1 });
+    gsap.from(".box3", { opacity: 0, scale: 0, duration: 1, delay: 1.5 });
+    gsap.from(".box4", { opacity: 0, duration: 1, x: -400, delay: 2 });
   });
 
   const submit = (e) => {
@@ -43,27 +19,22 @@ const Login = ({ handlelogin }) => {
     handlelogin(email, password);
     setEmail("");
     setPassword("");
-
-    
   };
 
   return (
-    <div className="  flex justify-center items-center h-screen bg-gradient-to-r from-blue-200 to-blue-300">
-      <div className=" box flex  bg-white rounded-lg shadow-lg overflow-hidden w-[800px] ">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-blue-200 to-blue-300 p-4">
+      <div className="box flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-3xl">
         {/* Login Form Section */}
-        <div className="  w-3/5 p-10">
+        <div className=" md:w-3/5 p-6 sm:p-10 m-3.5">
           <img
             src="https://dcassetcdn.com/design_img/2911119/603629/603629_16003069_2911119_6200246e_image.png"
-            alt="error"
-            className="w-[20%] h-[20%] mb-0.5 box3"
+            alt="logo"
+            className="w-16 h-16 mb-3 box3"
           />
-          <p> welcome on this website</p>
-          <h2 className="text-2xl font-semibold mb-6 text-black">Log In</h2>
-          <form
-            onSubmit={(e) => {
-              submit(e);
-            }}
-          >
+          <p className="text-gray-600 text-sm sm:text-base">Welcome to our website!</p>
+          <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-black">Log In</h2>
+          
+          <form onSubmit={submit}>
             <div className="mb-4">
               <label htmlFor="email" className="block text-sm font-medium mb-1">
                 Email
@@ -79,10 +50,7 @@ const Login = ({ handlelogin }) => {
               />
             </div>
             <div className="mb-4">
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium mb-1"
-              >
+              <label htmlFor="password" className="block text-sm font-medium mb-1">
                 Password
               </label>
               <input
@@ -102,19 +70,19 @@ const Login = ({ handlelogin }) => {
             </div>
             <button
               type="submit"
-              className=" box4 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-md text-lg font-medium"
+              className="box4 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-md text-sm sm:text-lg font-medium flex items-center justify-center gap-2"
             >
-              <span className="flex text-center items-center m-auto justify-center ">  LOGIN < MdKeyboardDoubleArrowRight className="w-[3rem]"/></span> 
+              LOGIN <MdKeyboardDoubleArrowRight className="text-xl" />
             </button>
           </form>
         </div>
 
         {/* Image Section */}
-        <div className="  w-2/5 flex items-center justify-center bg-gradient-to-b from-blue-300 to-blue-200 p-6 rounded-md ">
+        <div className=" hidden  sm:block md:flex w-full md:w-2/5 items-center justify-center bg-gradient-to-b from-blue-300 to-blue-200 p-6 rounded-md ">
           <img
             src="https://cs13.pikabu.ru/projects/skidki_deal/large/2023-04_1/1680529944139515475.png"
-            alt="error"
-            className="rounded-lg w-full relative box2"
+            alt="illustration"
+            className="rounded-lg w-full max-w-xs box2"
           />
         </div>
       </div>

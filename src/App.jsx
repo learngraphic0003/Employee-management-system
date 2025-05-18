@@ -9,6 +9,8 @@ import Alltask from "./components/other/Alltask";
 
 
 
+
+
 const App = () => {
   const [user, setUser] = useState(null);
   const [userData,setUserData] = useContext(AuthContext);
@@ -42,7 +44,7 @@ const App = () => {
 
   const handlelogin = (email, password) => {
    
-    if (email == "admin@example.com" && password == "123") {
+    if (email == "learngraphic0003@gmail.com" && password == "123") {
       setUser('admin');
      
      localStorage.setItem("loggedInUser", JSON.stringify({ role: "admin" }));
@@ -68,6 +70,7 @@ const App = () => {
 
   return (
     <>
+   
       {!user ? <Login handlelogin={handlelogin} /> : '' }
       {user == "admin" ? <AdminDashboard changeUser = {setUser}  /> : ( user == "employee" ? <EmployeeDashboard  changeUser = {setUser} data = {loggedInUserData }/> : null )}  
      
